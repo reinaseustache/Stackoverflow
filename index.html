@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="main.css"/>
+        <script src="main.js"></script>
+    </head>
+
+    <body class = "grid-container-main">
+        <div id = "header">
+            <h3 style="width: 800px">CyBlog</h3>
+        </div>  
+
+        <div id = "empty"> </div>
+
+        <div id = "empty2"> </div>
+
+        <div id = "profileHeader">
+            <img id = "backbtn" onclick="goBack()" src="backbtn.png">
+
+            <button id = "postAnswer" onclick="postAnswer()">+ Post an Answer</button>
+
+            <div style="height: 40px;">
+                <button id = "askQuestion" onclick="askQuestion()">+ Ask a Question</button>
+            </div>
+
+            <div id = "profDetails">
+                <div style="height: 40px;">
+                    <button id = "signOut" onclick="">Sign out</button>
+                </div>
+
+                <img src="profile_holder.png" style = "width: 100px; height:100px;"> 
+                <span id="userName"></span>
+                <hr>
+
+            </div>
+            
+            <div id = "ansParent"> </div>
+        </div>
+        
+        <div id = "profileBottom">
+            <div class = "bottoms" id = "quesBottom"> </div>
+            <div class = "bottoms" id = "ansBottom"> </div>
+        </div>
+
+        <div id = "headerRight"> </div>  
+
+        <div id="popUp" class="modal">
+            <div class="modal-content animate" style="width: 40%;">
+                <div class="xcontainer">
+                    <span onclick="document.getElementById('popUp').style.display='none'" class="close" title="Close Modal">&times;</span>
+                </div>
+          
+                <div class="container">
+                    <label class = "white"><b>Username</b></label>
+                    <input class="popUp" type="text" placeholder="Enter Username" id = "username">
+          
+                    <label class = "white"><b>Password</b></label>
+                    <input class="popUp" type="password" placeholder="Enter Password">
+                  
+                    <button onClick= "processSignIn()" class = "white">Sign in</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="popUpQuestion" class="modal">
+            <div class="modal-content animate" style="width: 40%;">
+                <div class="xcontainer">
+                    <span onclick="document.getElementById('popUpQuestion').style.display='none'" class="close" title="Close Modal">&times;</span>
+                </div>
+          
+                <div class="container">
+                    <label class = "white"><b>What's the Question?</b></label>
+                    <input class="popUp" type="text" placeholder="What does...?" id = "quesTitle">
+          
+                    <label class = "white"><b>Description</b></label>
+                    <textarea rows="5" cols="30" class="popUp" type="text" placeholder="Add a Description..." style="height: 200px;" id = "quesDescr"></textarea>
+                  
+                    <button onClick= "post()" class = "white">Post Question</button>
+              </div>
+            </div>
+        </div>
+
+        <div id="popUpAnswer" class="modal">
+            <div class="modal-content animate" style="width: 40%;">
+                <div class="xcontainer">
+                    <span onclick="document.getElementById('popUpAnswer').style.display='none'" class="close" title="Close Modal">&times;</span>
+                </div>
+
+                <div class="container">
+                    <label class = "white"><b>Answer</b></label>
+                    <textarea rows="5" cols="30" class="popUp" type="text" placeholder="That is a common misconception, but..." style="height: 200px;" id = "ansDesc"></textarea>
+              
+                    <button onClick= "submitAnswer()" class = "white">Post an Answer</button>
+                </div>
+            </div>
+        </div>
+
+        <div id = "mainPage" >
+            <h1 style="text-align: center;">Already have an account?</h1>
+            <br> <br>
+
+            <div id = "logIn">
+                <button id = "headerSignIn" onclick="headerSignIn()" >Sign in</button>
+            </div>
+
+            <br> <br>
+            <h3 id = "account">Don't have an account? Sorry, we don't support account creation.</h3>
+        </div>
+    </body>
+</html>

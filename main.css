@@ -1,0 +1,283 @@
+body{
+    margin: 0px;
+    background: linear-gradient( #ffffff,#003366, #003366);
+}
+
+.grid-container-main {
+  display: grid;
+  grid-template: 
+  "header headerRight" 50px
+  "picture picture" 700px
+  "search articles" 50px
+  "sidebar articles" 850px
+  /500px       
+  ;
+}
+
+.grid-container-profile {
+  display: grid;
+  grid-template: 
+  "header    headerRight      headerRight" 
+  "empty    profileHeader     empty2" 300px
+  "empty    profileBottom     empty2" 800px
+  /100px    1400px            100px    
+  ;
+}
+
+div[id = "empty"]{
+  padding: 5px;
+  width: 100px;
+  grid-area: empty;
+  display: none;
+}
+
+div[id = "empty2"]{
+  padding: 5px;
+  width: 100px;
+  grid-area: empty;
+  display: none;
+}
+
+h3 {
+    color: #003366;
+    font-size: 20px;
+    margin: 10px;
+}
+
+div[id = "header"]{
+    background-color: #ffffff;
+    padding: 2px;
+    grid-area: header;
+    border-bottom: 4px solid #003366;
+}
+
+div[id = "headerRight"]{
+    background-color: #ffffff;
+    padding: 2px;
+    grid-area: headerRight;
+    display: grid;
+    grid-template: 
+    "header logIn" 
+    /800px 200px
+    ;
+
+    border-bottom: 4px solid #003366;
+}
+
+div[id = "profileHeader"]{
+  padding: 2px;
+  grid-area: profileHeader;
+  display: none;
+  grid-template: 
+  "empty"      300px
+  "profileHeader" 100px
+  /300px
+  ;
+}
+
+div[id = "profileBottom"]{
+  padding: 2px;
+  grid-area: profileBottom;
+  display: none;
+}
+
+div[id = "logIn"]{
+    background-color: #ffffff;
+    padding: 2px;
+    grid-area: logIn;
+}
+
+div[id = "picture"]{
+    padding: 5px;
+    grid-area: picture;
+}
+
+div[id = "search"]{
+    padding: 15px;
+    grid-area: search;
+}
+
+div[id = "sidebar"]{
+    background-color: #003366;
+    padding: 5px;
+    grid-area: sidebar;
+}
+
+div[id = "articles"]{
+    padding: 5px;
+    grid-area: articles;
+}
+
+.popUp {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 20px;
+  }
+  
+  button {
+    background-color: #456c94;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  .xcontainer {
+    position: relative;
+  }
+  
+  .container {
+    background: linear-gradient(to bottom right, #003366, #ffffff);
+    padding: 16px;
+  }
+  
+  .modal {
+    display: none;
+    position: fixed; 
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    padding-top: 60px;
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  .close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+  
+  .animate {
+    animation: animatezoom 0.6s
+  }
+
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+  
+  @media screen and (max-width: 300px) {
+  }
+
+#backbtn {
+  float: left; 
+  height: 50px; 
+  display: none; 
+  margin-left: 40px;
+}
+
+#postAnswer {
+  display:none;
+  width:220px; 
+  height: 45px; 
+  padding: 4px; 
+  margin-top: 12px; 
+  background: linear-gradient(to bottom right, #003366, #74a9dd);
+  border-radius: 20px; 
+  color: #ffffff; 
+  margin: 7px;
+  float: right;
+}
+
+#askQuestion {
+  width:220px; 
+  height: 45px; 
+  padding: 4px; 
+  margin-top: 12px;  
+  background: linear-gradient(to bottom right, #003366, #74a9dd);
+  border-radius: 20px; 
+  color: #ffffff; 
+  margin: 7px;
+  float: right;
+}
+
+#profDetails {
+  padding: 17px;  
+  margin-top: 20px;
+  background: #003366;
+}
+
+#signOut {
+  width:100px; 
+  height: 25px; 
+  padding: 4px; 
+  margin-top: 12px;  
+  background: linear-gradient(to bottom right, #003366, #74a9dd);
+  border-radius: 20px; 
+  color: #ffffff; 
+  margin: 7px;
+  float: right;
+
+}
+
+#userName {
+  color: #d60404; 
+  margin: 10px; 
+  font-size: 25px; 
+  font-weight: bold;
+}
+
+.bottoms {
+  height: 2000px;
+}
+
+.white{
+  color: #ffffff;
+}
+
+#mainPage {
+  background: #003366;
+  color: #ffffff;
+  border-radius: 15px; 
+  height: 300px;
+  width: 600px;
+  margin-left: 500px; 
+  margin-top: 300px;
+}
+
+#headerSignIn {
+  padding: 4px; 
+  margin-top: 12px;  
+  background: linear-gradient(to bottom right, #003366, #74a9dd);
+  border-radius: 20px; 
+  color: #ffffff; 
+  margin: 7px;
+  margin-left: 205px; 
+  height: 40px;
+  width:190px;
+}
+
+#account {
+  text-align: center; 
+  color: #ffffff;
+}
